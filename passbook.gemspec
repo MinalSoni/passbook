@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
+  s.metadata["yard.run"] = "yri"
   s.authors = ["Thomas Lauro", "Lance Gleason"]
   s.date = "2017-02-20"
   s.description = "This gem allows you to create IOS Passbooks.  Unlike some,  this works with Rails but does not require it."

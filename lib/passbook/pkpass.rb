@@ -45,6 +45,7 @@ module Passbook
       self.file.path
     end
 
+
     # Return a Tempfile containing our ZipStream
     def file(options = {})
       options[:file_name] ||= 'pass.pkpass'

@@ -34,7 +34,7 @@ describe 'Signer'  do
             OpenSSL::X509::Certificate.should_receive(:new).with('my_p12_certificate_file').and_return 'my_ssl_p12_cert'
           end
 
-          subject {Passbook::Signer.new(certificate: 'my_p12_certificate', password: 'password', 
+          subject {Passbook::Signer.new(certificate: 'my_p12_certificate', password: 'password',
                                         key: 'my_p12_key', wwdc_cert: 'i_love_robots').key_hash}
           its([:key]) {should eq 'my_rsa_key'}
           its([:cert]) {should eq 'my_ssl_p12_cert'}
@@ -73,7 +73,7 @@ describe 'Signer'  do
             OpenSSL::PKCS12.should_receive(:new).with('my_p12_cert_file', 'password').and_return p12
           end
 
-          subject {Passbook::Signer.new(certificate: 'my_p12_cert', password: 'password', 
+          subject {Passbook::Signer.new(certificate: 'my_p12_cert', password: 'password',
                                         wwdc_cert: 'i_love_robots').key_hash}
           its([:key]) {should eq final_hash[:key]}
           its([:cert]) {should eq final_hash[:cert]}

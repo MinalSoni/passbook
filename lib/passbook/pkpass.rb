@@ -60,6 +60,7 @@ module Passbook
     def stream
       manifest, signature = build
 
+
       outputZip manifest, signature
     end
 

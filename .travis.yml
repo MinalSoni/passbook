@@ -5,3 +5,4 @@ rvm:
   - ruby-head
   - 2.0.0
   - 2.1.2
+script: "bundle exec jekyll build"
